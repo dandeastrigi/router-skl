@@ -64,7 +64,7 @@ router.post('/create_info', async (req, res) => {
       new_info,
     });
   } catch (err) {
-    return res.status(400).send({ error: 'Failed to save info' });
+    return res.status(400).send({ error: 'Failed to save info', err: err });
   }
 });
 
